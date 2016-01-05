@@ -10,7 +10,6 @@
 * Introduce participants to Open Refine as a powerful data-cleaning tool.
 
 * Introduce concept of facets
-* Show split columns by defined separator
 * Show power of include / exclude, sort by name / count
 * Show the power of clustering algorithms to reveal data patterns, data snafus
 * Show the power of undo / redo.
