@@ -2,6 +2,39 @@
 
 (Highly abbreviated version of R lessons found here: https://github.com/datacarpentry/2015-06-30-FederalReserveBoard/wiki.)
 
+
+Basic Layout
+Workflow
+
+R as calc
+Math functions
+Comparisons
+
+Variables and Assignment*
+
+Managing Environ (use ls() as lead in/discussion about functions)
+
+Project Management Universals and Whys (reproducible, making your life easier)
+Importance of scripting and file org
+Treating data as read-only
+Output disposable
+Separating cleaning from analysis code
+
+Help in R
+Google It/Stackoverflow
+
+Data Strucutre
+Quick Overview of Types
+Focus on Dataframes
+
+
+
+
+
+
+
+
+
 Basic layout
 
 When you first open RStudio, you will be greeted by three panels:
