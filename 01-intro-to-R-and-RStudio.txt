@@ -27,7 +27,12 @@ Data Strucutre
 Quick Overview of Types
 Focus on Dataframes
 
+Read GapMinder URL into dataframe
+Dataframe functions (head, names)
+Subsetting dataframes
 
+R/Twitter
+http://www.r-bloggers.com/how-to-create-a-twitter-sentiment-analysis-using-r-and-shiny/
 
 
 
