@@ -1,4 +1,7 @@
-
+---
+layout: lesson
+title: Open Refine
+---
 # Open Refine
 (Adapted from: https://github.com/tracykteal/openrefine-gapminder/blob/gh-pages/00-starting-with-OpenRefine.md)
 
