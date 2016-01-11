@@ -66,7 +66,7 @@ _Once Refine is open, you'll be asked if you want to Create, Open, or Import a P
 * If all looks well, give the project a better name and click _Create Project._
 * By default you see the first 10 rows of your data, but you can show up to 50.
 
-## Faceting
+# Faceting
 
 * Scroll over to the 'country' column
 * Click the down arrow and choose > Facet > Text facet
@@ -74,11 +74,29 @@ _Once Refine is open, you'll be asked if you want to Create, Open, or Import a P
 * Filter. Note that by clicking on a country name you limit the data displayed to that country only.
 * Edit. Note that at any time, in any cell of the Facet box, or data cell in the Refine window, you have access to "edit" and can fix an error immediately. Refine will even ask you if you'd like to make that same correction to every value it finds like that one (or not).
 
-## Cluster
+* Exercise 1: Manually Correct Afghanistan
+
+
+* Ask what they noticed about it? (A: extra Americas)
+* Exercise 2: Create a facet for Continents and notice anything off.
+
+* Select 'Colombia' and notice how it filters.
+* You can edit whole a filtered column
+* select americas and columbia
+* Click continent -> transform
+* In quotes, enter "America South" hit OK and notice that is vanishes.
+
+* Exercise 3: Do this edit for another country.
+
+* Reminder: What reset does?
+
+# Cluster
 
 * One of the most magical bits of Refine, the moment you realize what you've been missing. Refine has several clustering algorithms built in. Experiment with them, and follow the link inside Refine, to learn more about these algorithms and how they work. https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth
 * In this example, in the country Text Facet we created in the step above, click the _Cluster_ button.
 * In the resulting pop-up window, you can change the algorithm method, and keying function. Try different combinations to see the difference.
+** Key collision - creates alternative representation of keys - fastest with different functions for normalizing values
+** Nearest Neighbos - solves the too narrow or too lax problem - bins 'related keys' can be 'edit distance' between keys.
 * For example, with this dataset, the _nearest neighbor_ method with the _PPM_ keying function shows the power of clustering the best.
 * Countries have had different names over time or people inputting the data have mis-spelled the country name. In order to look at the same country over time though, it needs to have a consistent name. Intentional errors have been introduced to show how errors (typos) in any position can be found with this method, and there are instances of legitimate changes in country names over time. All errors or differences can then be fixed by entering the correct value in the box on the right. Often, the algorithm has guessed correctly.
 * After corrections are made in this window, Merge and Re-cluster.
@@ -86,11 +104,22 @@ _Once Refine is open, you'll be asked if you want to Create, Open, or Import a P
 
 ## Numeric Faceting and Filtering
 
-* Select the drop-down arrow next to lifeExp and click "Numeric Facet." Notice how in the left-hand column you get a graphical representation of the distribution along with a two-ended slider. You can use the slider to limit the rows shown to part of the distribution.
+* Select the drop-down arrow next to lifeExp and click "Numeric Facet." 
+** Notice how it broke, You can create numeric facets as well, however you need to let Refine know that the column you're using is numeric. 
+** Select drop-down from lifeExp, replace the expression that says 'value' with value.toNumber() and click OK.
+** Notice how in the left-hand column you get a graphical representation of the distribution along with a two-ended slider. You can use the slider to limit the rows shown to part of the distribution.
+* Now, for an exercise, repeat this for the gdpPerCal column
 * Now, select the drop-down arrow by gdpPerCap and click "Numeric Facet." Both filters are now applied and you can see the outliers, for example, which country/years have a low life expectancy but a high GDP per capita? 
 
+# Text Splitting and manipulation
+* If data in a column needs to be split into multiple columns, and the strings in the cells are separated by a common separator (say a comma, or a space), you can use that separator to divide up the bits into their own columns.
+** One real-world use of this would be to split location data (ie, city -comma- state) into its parts
+* Continent -> Edit Columns -> split into several columns
+** Choose by separator, remove the , and put in a space then click OK.
+* Now, Create a text facet for Continent 1
 
-## Scripts
+
+# Scripts
 
 * Refine saves every change, every edit you make to the dataset in a file you can save on your machine.
 * If you had 20 files to clean, and they all had the same type of errors, and all files had the same columns, you could save the script, open a new file to clean, paste in the script and run it. Voila, clean data.
